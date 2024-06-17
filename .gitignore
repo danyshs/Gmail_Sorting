@@ -1,0 +1,17 @@
+# Setup Files
+credentials.json
+
+# Logs and databases
+*.log
+
+# PIIs
+labels.txt
+mailFilters.xml
+newMailFilters.xml
+OGmailFilters.xml
+output.txt
+outputBACKUP.txt
+token.pickle
+xmlupdate.txt
+
+
