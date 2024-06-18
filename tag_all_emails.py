@@ -64,7 +64,7 @@ def tag_emails(emails, labels, tagged_filename):
     """Tag emails with the given labels."""
     tagged_emails = {}
     for i, email in enumerate(emails, start=1):
-        print(f"Tagging email: {email} ({len(emails) - i} emails remaining)")
+        print(f"Tagging email: {email} ({len(emails) - i} email addresses remaining)")
         labels.sort()
         for i, label in enumerate(labels, start=1):
             print(f"{i}. {label}")
