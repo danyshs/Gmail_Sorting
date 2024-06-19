@@ -4,7 +4,7 @@ This module provides a script runner for a set of predefined scripts.
 
 import os
 import subprocess
-
+import sys
 
 def select_script(scripts):
     """Display script options and return the file of the selected script."""
@@ -18,7 +18,7 @@ def select_script(scripts):
         print("Invalid choice. Please enter a valid number.")
 
 
-def run_script():
+def run_script(*args, **kwargs):
     """Change directory to script location and run the selected script."""
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -50,4 +50,4 @@ def run_script():
 
 
 if __name__ == "__main__":
-    run_script()
+    run_script(*sys.args, **sys.kwargs)
