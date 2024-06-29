@@ -30,7 +30,7 @@ def run_script():
       },
       "2": {
           "name": "Tag All Emails - Manual Script to apply tags to each of "
-          "the unique email addresses so they\"re binned correctly",
+          "the unique email addresses so they\'re binned correctly",
           "file": "tag_all_emails.py"
       },
       "3": {

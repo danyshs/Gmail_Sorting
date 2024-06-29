@@ -13,7 +13,7 @@ from google.auth.transport.requests import Request
 SCOPES = ["https://mail.google.com/"]
 TOKEN_FILE = "token.pickle"
 CREDENTIALS_FILE = "credentials.json"
-OUTPUT_FILE = "output.txt"
+OUTPUT_FILE = "sorted_emails.txt"
 XML_FILE = "mailFilters.xml"
 DEFAULT_COUNT = 80000  # Default number of emails to read
 COMMS_NUMBER = 50  # How many emails after which to give a status update
@@ -125,12 +125,16 @@ def process_messages(service, messages, xml_emails):
               if values["name"] == "From":
                 email = extract_email_address(values["value"])
                 if email not in xml_emails:
-                  unique_emails[email] = unique_emails.get(
-                      email, 0) + 1
+                  unique_emails[email] = unique_emails.get(email, 0) + 1
                   email_processed = True  # Mark email as processed
                   last_email_process_time = current_time  # Update last process time
+
               elif values["name"] == "Subject":
-                subject = values["value"]
+                  # Replace line breaks with spaces
+                subject = values["value"].replace(
+                    '\n', ' ').replace('\r\n', ' ')
+                # Remove any leading/trailing whitespace
+                subject = subject.strip()
 
             if email_processed:
               if email in email_subjects:
