@@ -173,7 +173,7 @@ def process_messages(service, messages, xml_emails):
             eta = estimated_total_time - elapsed_time
             print(
                 f"Processed {
-                    i}/{total_messages} messages. ETA: {eta // 60:.0f} minutes {eta % 60} seconds."
+                    i}/{total_messages} messages. ETA: {eta // 60:.0f} minutes {int(eta % 60)} seconds."
             )
 
             logging.info(
