@@ -71,11 +71,11 @@ Option 2: TBA
 - Upon running `run.py`, you will see a list of available scripts along with their descriptions.
 - Enter the number corresponding to the script you wish to run.
 
-# 1 -> **email\_fix.py**: Reads the metadata of your top n chunk of emails, lists unique email addresses sorted alphabetically and by frequency, stores it in a text file) [Takes a long while]
+1. **email\_fix.py**: Reads the metadata of your top n chunk of emails, lists unique email addresses sorted alphabetically and by frequency, stores it in a text file) [Takes a long while]
 
-# 2 -> **tag\_all\_emails.py**: Allows you to **manually** tag each unique email address for proper categorization [and sub-categorization]. Requires the output file of #1
+2. **tag\_all\_emails.py**: Allows you to **manually** tag each unique email address for proper categorization [and sub-categorization]. Requires the output file of #1
 
-# 3 -> **generate\_filter\_xmls.py**: Generates an XML file that can be imported in Gmail to apply filters based on the criteria that you set. Requires the output file of #2
+3. **generate\_filter\_xmls.py**: Generates an XML file that can be imported in Gmail to apply filters based on the criteria that you set. Requires the output file of #2
 
 * * *
 
